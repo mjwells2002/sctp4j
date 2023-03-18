@@ -192,7 +192,7 @@ abstract public class Association {
         return res;
     }
 
-    void deal(Packet rec) throws Exception {
+    protected void deal(Packet rec) throws Exception {
         List<Chunk> cl;
         Chunk[] s = {};
         ArrayList<Chunk> replies = new ArrayList();
@@ -233,7 +233,7 @@ abstract public class Association {
         }
     }
 
-    void startRcv() {
+    protected void startRcv() {
         final Association me = this;
         Runnable r = new Runnable() {
             @Override
